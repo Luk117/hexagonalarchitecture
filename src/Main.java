@@ -1,4 +1,4 @@
-import aplication.UserRepository;
+import aplication.port.UserRepository;
 import aplication.UserService;
 import domain.User;
 import infrastructure.InMemoryUserRepository;

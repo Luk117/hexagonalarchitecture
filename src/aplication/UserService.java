@@ -1,5 +1,6 @@
 package aplication;
 
+import aplication.port.UserRepository;
 import domain.User;
 
 public class UserService {

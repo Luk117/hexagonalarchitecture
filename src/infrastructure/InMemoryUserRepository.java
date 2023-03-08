@@ -1,6 +1,6 @@
 package infrastructure;
 
-import aplication.UserRepository;
+import aplication.port.UserRepository;
 import domain.User;
 
 import java.util.HashMap;
