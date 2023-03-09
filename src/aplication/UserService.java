@@ -3,6 +3,8 @@ package aplication;
 import aplication.port.UserRepository;
 import domain.User;
 
+import java.util.List;
+
 public class UserService {
     private UserRepository userRepository;
 
@@ -10,12 +12,23 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void createUser(String name, int age) {
-        User user = new User(name, age);
-        userRepository.saveUser(user);
+    public List<User> getAllUsers() {
+        return userRepository.getAllUsers();
     }
 
-    public User getUserByName(String name) {
-        return userRepository.getUserByName(name);
+    public User getUserById(String id) {
+        return userRepository.getUserById(id);
+    }
+
+    public void addUser(User user) {
+        userRepository.addUser(user);
+    }
+
+    public void updateUser(User user) {
+        userRepository.updateUser(user);
+    }
+
+    public void deleteUser(String id) {
+        userRepository.deleteUser(id);
     }
 }
